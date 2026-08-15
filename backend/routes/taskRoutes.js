@@ -9,21 +9,16 @@ const {
     deleteTask
 } = require("../controllers/taskController");
 
-
-// Get all tasks
+// GET    /api/tasks
 router.get("/", getTasks);
 
-
-// Create task
+// POST   /api/tasks
 router.post("/", createTask);
 
-
-// Update task
+// PUT    /api/tasks/:id
 router.put("/:id", updateTask);
 
-
-// Delete task
+// DELETE /api/tasks/:id
 router.delete("/:id", deleteTask);
-
 
 module.exports = router;
